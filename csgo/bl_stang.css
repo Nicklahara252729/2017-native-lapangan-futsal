@@ -1,0 +1,577 @@
+*{
+    font-family: "calibri";
+    font-size: 15px;
+}
+body{
+    overflow:hidden;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th{
+    font-weight: normal;
+    text-transform:uppercase;
+    text-align: center;
+    color: white;
+    height: 35px;
+    background: #3C8DBC;
+}
+td{
+    height: 35px;
+    font-size: 14px;
+}
+.badge{
+    background: red;
+}
+
+section,.content{
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+.content-wrapper{
+    background: white;
+}
+.pagination{
+    margin-top: -7px;
+}
+.content{
+    max-height: 550px;
+    overflow: auto;
+}
+.content-header{
+    padding: 0;
+    margin: 0;
+    height: 40px;
+}
+button{
+    border: 0;
+    border-radius: 3px;
+    background: #f8f8f8;
+    height: 30px;
+    text-align: center;
+}
+.content-header button{
+    margin-top: 7px;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 10px;
+}
+.tambah,
+.hapus-semua,
+.detail,
+.hapus,
+.edit{
+    transition: all 0.3s ease-out;
+}
+.tambah{
+    background: green;
+    color: white;
+}
+.tambah:hover{
+    background: white;
+    border: solid 1px green;
+    color: green;
+}
+.hapus-semua{
+    background: #DD4B39;
+    color: white;
+}
+.hapus-semua:hover{
+    background: white;
+    color: #DD4B39;
+    border: solid 1px  #DD4B39;
+}
+.detail{
+    color: #3C8DBC;
+}
+.hapus{
+    color: #DD0000;
+}
+.edit{
+    color: #F39C12;
+}
+
+@media only screen and (min-device-width:0px) and (max-device-width:1024px){
+    #ico-left{
+        display: none;
+    }
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+    input[type="file"],
+    textarea,
+select{
+    width: 80%;
+}
+    .kota,
+    .kecamatan,
+    .keluarahan{
+        display: none;
+    }
+}
+@media only screen and (min-device-width:1025px){
+    input[type="text"],
+input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    input[type="file"],
+    textarea,
+select{
+    width: 85%;
+}
+    
+}
+
+@keyframes fade{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes zoom{
+    from{margin-top: -1000px; opacity: 0;}
+    to{margin-top: 20px; opacity: 1;}
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+select{
+    height: 40px;
+    border: 0;
+    background: transparent;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+textarea{
+    padding: 10px;
+    border: 0;
+    width: 97%;
+    height: 250px;
+    
+}
+option{
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+input[type="file"]{
+    margin-left: 20px;
+}
+.tutup{
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-top: 0px;
+    background: white;
+    color: green;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: solid 0px #E71A00;
+    transition: all 0.5s ease-in-out;
+    font-size: 20px;
+    border: solid 1px green;
+}
+.tutup:hover{
+    background: green;
+    color: white;
+}
+.register,.detail-page{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    z-index: 9999;
+    overflow: auto;
+    display: none;
+    animation: fade 0.8s ease;
+}
+.detail-page{
+    display: block;
+}
+.in-login{
+    height: 100%;
+    float: left;
+}
+#in-satu{
+    width: 85%;
+    text-align: center;
+    padding-top: 20px;
+    font-family: "century gothic";
+    
+}
+#in-dua{
+    width: 15%;    
+    padding-top: 20px
+}
+.content-login{
+    width: 30%;
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 3px;
+    background: #f8f8f8;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+    padding-bottom: 10px;
+    animation: zoom 1s ease;
+}
+.content-login button[type="submit"],
+.content-login button[type="reset"]{
+    width: 100%;
+    height: 40px;
+    transition: all 0.5s ease-in-out;
+    margin-top: 10px;
+    border: 0;
+}
+.content-login button[type="reset"]{
+    background: green;
+}
+.content-login button[type="submit"]{
+    background: #004FA7;
+}
+.content-login button[type="reset"]:hover{
+    background: white;
+    color: green;
+    border: solid 1px green;
+}
+.content-login button[type="submit"]:hover{
+    background: #fff;
+    color: #004FA7;
+    border: solid 1px #004FA7;
+}
+.isi-login{
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 3px 3px 0px 0px;
+    font-size: 15px;
+    font-family: "century gothic";
+}
+.img-user-regist{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url(../davinci/logo/user.png);
+    background-size: 100% 100%;
+    margin: 0 auto;
+    margin-top: -25px;
+}
+
+#login-satu{
+    height: 90px;
+    width: 100%;
+    background: white;
+}
+.navbar{
+    background: #fff;
+}
+#login-dua{
+    height: auto;
+    margin-top: 10px;
+    border: 0;
+}
+.inpt{
+    height: auto;
+    width: 100%;
+    border-bottom: solid 1px lightgray;
+    color:black;
+    margin-top: 10px;
+}
+.isi-inpt{
+    float: left;
+    width: 30%;
+    background: blue;
+}
+#ico-left{
+    font-size: 16px;
+    margin-left: 10px;
+    color: darkslategray;
+}
+#inpt-msg{
+    height: 10px;
+    border: 0;
+    font-style: italic;
+    text-align: center;
+}
+#ok-satu,
+#ok-dua,
+#ok-tiga,
+#ok-empat,
+#ok-lima,
+#ok-enam,
+#ok-tujuh,
+#ok-lapan{
+    color: green;
+    font-size: 20px;
+    display: none;
+    float: right;
+    margin-right: 5px;
+    margin-top: 8px;
+}
+#bl_msgpass{
+    font-size: 13px;
+}
+#btn_submt2,
+#btn_edt2   {
+    display: none;
+}
+#btn_edt,
+#btn_edt2,
+#btn_edt3{
+    width: 100%;
+}
+
+.content-detail,.content-det{
+    margin: 0 auto;
+    width: 80%;
+    height:100%;
+    border-radius: 3px;
+    background: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: zoom 1s ease-in-out;
+}
+#container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: white;
+    border-radius: 3px;
+    animation: zoom 1s ease-in-out;
+}
+.img-edit-user{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.img-user-edt{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: solid 3px green;
+    border-radius: 50%;
+}
+#btn_det{
+    width: 100%;
+    height: 40px;
+}
+.isi-detail{
+    width: 100%;
+}
+#detail-satu{
+    height: 45%;
+}
+#detail-dua{
+    height: 55%;
+}
+#det-vid{
+    background: #1B1718;
+    overflow: hidden;
+}
+.rows-detail{
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+.rows-detail span{
+    font-size: 25px;
+    color: gray;
+    padding-top: 23%;
+    position: relative;
+}
+.rows-detail-dua{
+    width: 33.3%;
+    height: 100%;
+    float: left;
+}
+.img-lap{
+    width: 100%;
+    height: 100%;
+}
+.caption{
+    font-family: "calibri";
+    font-size: 15px;
+    font-style: italic;
+}
+#rows-right{
+    overflow: auto;
+}
+#title-edt{
+    background: #f8f8f8;
+    border: solid 1px lightgray;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 40px;
+    height: 40px
+}
+.video-lapangan{
+    width: 100%
+}
+.in-rows-det{
+    width: 50%;
+    height: 50%;
+    float: left;
+}
+#info-lap{
+    margin-bottom: 10px;
+}
+#komentar{
+    width: 100%;
+    height: auto;
+    font-family: "calibri";
+    overflow: hidden;
+    text-align: justify;
+}
+#button{
+    width: 100%;
+    margin-bottom: 5px;
+}
+#isi-komentar{
+    font-size: 14px;
+}
+#rows-right{
+    overflow: auto;
+}
+.isi-komentar{
+    float: left;
+}
+#title-koment .nama{
+    margin-left: 30px;
+}
+#rows-mid{
+    text-align: justify;
+    padding-right: 5px;
+    background: #f8f8f8;
+    padding: 5px;
+    overflow: auto;
+}
+#red{
+}
+#red span{
+    line-height: 0px;
+}
+#red input[type="text"],
+#red input[type="number"]{
+    border-bottom: solid 1px lightgray;
+}
+#area textarea{
+    background: #f8f8f8;
+}
+#area{
+    margin-top: 20px;
+}
+.txt-area{
+    height: 330px;
+}
+.in-con-det{
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+.isi-det{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+#isi-det-satu{
+    background: #1B1718;
+}
+.vid-det-lap{
+    width: 100%;
+}
+.det-div-img{
+    width: 50%;
+    height: 50%;
+    float: left;
+}
+.img-det-lap{
+    width: 100%;
+    height: 100%;
+}
+
+.nama{
+    font-style: italic ;
+    font-weight: bold;
+}
+#left-koment{
+    width: 20%;
+    background: red;
+}
+#img-komen{
+    width: 60px;
+    height: 60px;
+}
+#right-koment{
+    background: blue;
+}
+.kembali{
+    width: 40px;
+    height: 40px;
+    border: solid 1px white;
+    color: white;
+    position: fixed;
+    right: 30px;
+    top: 10px;
+    background: transparent;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+.kembali:hover{
+    background: white;
+    color: black;
+    border: 0;
+}
+.content-user{
+    width: 50%;
+    height: auto;
+    background: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    animation: zoom 1s ease-in-out;
+}
+#title-user{
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 17px;
+    font-family: "century gothic";
+}
+#info-user{
+    height: 30px;
+}
+#rows-atas{
+    background: white;
+}
+#rows-bawah{
+    background: #f8f8f8;
+}
+.img-info-user{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 40px;
+    transition: all 0.5s ease-in-out;
+}
+.img-info-user:hover{
+    transform: scale(2,2);
+    z-index: 9999;
+    border-radius: 0;
+}
+#but-on{
+    margin-top: 10px;
+    width: 100px;
+    float: right;
+    margin-right: 10px;
+    border: 0;
+}
